@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap");
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --btn-color: rgb(34, 34, 34);
+}
+
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.wrapper {
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list {
+  width: 100%;
+}
+.main {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+}
+.image {
+  height: 50%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card {
+  height: 80%;
+  box-shadow: 0 4px 8px 0 var(--shadow);
+  transition: 0.3s;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 var(--shadow);
+}
+
+.container {
+  height: 50%;
+  padding: 2px 16px;
+}
+.container p {
+  margin-top: 0px;
+}
+
+.container h4 {
+  margin-top: 10px;
+  font-weight: 1rem !important;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  overflow-y: scroll;
+  z-index: 4;
+}
+nav ul {
+  z-index: 2;
+}
+.popup .content {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.popup .content .pophead {
+  font-family: "Noto Serif JP", serif;
+}
+.popup .content .closed {
+  color: var(--bg-color);
+  background: var(--btn-color);
+  border-radius: 5px;
+  padding: 8px 13px;
+  letter-spacing: 2px;
+}
+.popup .content .closed:hover {
+  color: var(--btn-color);
+  background: var(--bg-color);
+  cursor: pointer;
+}
+
+.popup .content h2 span {
+  font-size: 20px;
+}
+.popup .content .plot {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  padding-bottom: 16px;
+}
+.popup .content .plot .plot1 {
+  width: 72%;
+  height: 100%;
+  padding: 0em 2em;
+}
+.popup .content .plot .plot2 {
+  text-align: start;
+  padding-left: 23px;
+}
+
+.popup .content .plot .plot1 img {
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+}
+.popup .content .plot .plot1 img:hover {
+  transform: scale(1.2);
+  overflow: hidden;
+
+  transition: all 0.5s ease;
+}
+.popup .content .plot .plot1 .effect:hover {
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+.popup .content .plot p {
+  flex: 1 1 50%;
+}
+h3 {
+  font-size: 20px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+}
+h3 span {
+  margin-left: 3px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.status {
+  padding-bottom: 100px;
+}
+
+.popup .content .plot .plot1 .effect {
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 var(--shadow);
+}
+
+@media (max-width: 880px) {
+  .container h4 {
+    font-size: 18px;
+  }
+  .container p {
+    font-size: medium;
+  }
+}
+@media (max-width: 750px) {
+  .popup .content .plot {
+    display: block;
+  }
+  .popup .content .plot .plot1 .effect {
+    height: 350px;
+    width: 270px;
+  }
+  .popup .content .plot .plot1 img {
+    height: 350px;
+    width: 270px;
+  }
+
+  .popup .content .plot .plot1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .popup .content .plot .plot2 {
+    padding: 35px;
+  }
+  .popup .content .close {
+    margin: 1em;
+    padding: 0.5em 1em;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h3 span {
+    margin-left: 3px;
+    font-size: 17px;
+  }
+  .container h4 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .list {
+    width: 70%;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h3 span {
+    margin-left: 3px;
+    font-size: 15px;
+  }
+  .popup .content .plot .plot1 .effect {
+    height: 300px;
+    width: 250px;
+  }
+  .popup .content .plot .plot1 img {
+    height: 300px;
+    width: 250px;
+  }
+
+  .container p {
+    font-size: small;
+  }
+  .container h4 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 456px) {
+  .list {
+    width: 90%;
+  }
+  .popup .content .plot .plot1 .effect {
+    height: 280px;
+    width: 250px;
+  }
+  .popup .content .plot .plot1 img {
+    height: 280px;
+    width: 250px;
+  }
+}
