@@ -118,6 +118,10 @@ nav ul {
   text-align: start;
   padding-left: 23px;
 }
+.popup .content .plot .plot2 .quoteslist {
+  font-size: 18px;
+  font-family: "Noto Serif JP", serif;
+}
 
 .popup .content .plot .plot1 img {
   height: 400px;
@@ -213,6 +217,9 @@ h3 span {
   }
   h3 span {
     margin-left: 3px;
+    font-size: 15px;
+  }
+  .popup .content .plot .plot2 .quoteslist {
     font-size: 15px;
   }
   .popup .content .plot .plot1 .effect {

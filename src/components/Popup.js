@@ -41,7 +41,7 @@ function Popup({ popData, name, closePopup }) {
                 Portrayed: <span> {popData[0].portrayed}</span>
               </h3>
               <h3>Quotes</h3>
-              <div>
+              <div className="quoteslist">
                 {main.map((curr) => {
                   return <li>{curr}</li>;
                 })}
