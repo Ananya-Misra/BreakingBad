@@ -3,7 +3,6 @@ function Popup({ popData, name, closePopup }) {
   const main = [];
   if (name.length === 0) {
     main[0] = "N/A";
-    popData[0].nickname = "N/A";
   }
 
   for (var i = 0; i < name.length; i++) {
@@ -22,37 +21,33 @@ function Popup({ popData, name, closePopup }) {
                 <img src={popData[0].img} alt="Retry" />
               </div>
             </div>
-            <div className="plot2">
-              <h3 data-aos="fade-left">
+            <div data-aos="fade-left" className="plot2">
+              <h3>
                 D.O.B:<span> {popData[0].birthday}</span>
               </h3>
-              <h3 data-aos="fade-left">
+              <h3>
                 Seasons: <span>{popData[0].appearance.join(", ")}</span>
               </h3>
-              <h3 data-aos="fade-left">
+              <h3>
                 Occupation: <span>{popData[0].occupation.join(", ")}</span>
               </h3>
-              <h3 data-aos="fade-left">
+              <h3>
                 Status: <span>{popData[0].status}</span>
               </h3>
-              <h3 data-aos="fade-left">
+              <h3>
                 Nickname:<span> {popData[0].nickname}</span>
               </h3>
-              <h3 data-aos="fade-left">
+              <h3>
                 Portrayed: <span> {popData[0].portrayed}</span>
               </h3>
-              <h3 data-aos="fade-left">Quotes</h3>
-              <div data-aos="fade-left">
+              <h3>Quotes</h3>
+              <div>
                 {main.map((curr) => {
                   return <li>{curr}</li>;
                 })}
               </div>
               <br />
-              <button
-                data-aos="fade-right"
-                className="closed"
-                onClick={closePopup}
-              >
+              <button className="closed" onClick={closePopup}>
                 Close
               </button>
               <br />

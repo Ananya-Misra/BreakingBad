@@ -32,7 +32,6 @@ function App() {
   }, []);
   // function call on clicking the card view
   const openPopUp = (names) => {
-    console.log(quotes_API + names);
     fetch(character_API + "?name=" + names)
       .then((response) => response.json())
       .then((data) => {
@@ -41,7 +40,6 @@ function App() {
     fetch(quotes_API + names)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setName(data);
       });
   };
